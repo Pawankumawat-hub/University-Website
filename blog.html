@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<section class="sub-header">
+    <nav>
+          <a  href="index.html"><img src="images/—Pngtree—university logo in flat style_8743732.png" alt="University Logo"></a>
+
+
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="course.html">COURSE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>Our Certificate & Online Programming For 2021</h1>
+</section>
+
+<!-- Blog Content -->
+<section class="blog-content">
+    <div class="row">
+
+        <div class="blog-left">
+            <img src="images/certificate.jpg" alt="Certificate">
+
+            <p>
+                Our university provides industry-recognized certification programs designed to help students build
+                strong academic foundations and professional skills. These programs focus on practical learning,
+                modern technologies, and real-world problem solving. Students gain hands-on experience through
+                interactive sessions, expert guidance, and project-based training that prepares them for future
+                career opportunities across various domains.
+            </p>
+
+            <br>
+
+            <p>
+                The online learning platform allows students to study at their own pace while maintaining academic
+                excellence. Courses are structured with recorded lectures, live doubt-clearing sessions, and regular
+                assessments. Faculty members ensure continuous evaluation and mentoring so learners remain motivated
+                and confident throughout their academic journey.
+            </p>
+
+            <br>
+
+            <p>
+                Our curriculum is designed according to current industry standards and emerging technologies.
+                Students are encouraged to participate in research activities, technical workshops, and innovation
+                programs. This approach helps develop analytical thinking, leadership qualities, and teamwork skills
+                required in today’s competitive professional environment.
+            </p>
+
+            <br>
+
+            <p>
+                In addition to academics, the university focuses on holistic student development. Cultural events,
+                technical fests, seminars, and career counseling sessions are organized regularly. These initiatives
+                help students improve communication skills, confidence, and overall personality development for
+                long-term success.
+            </p>
+
+           
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="blog-right">
+            <h3>Post Categories</h3>
+
+            <div>
+                <span>Business Analytics</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Machine Learning</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>Computer Science</span>
+                <span>40</span>
+            </div>
+            <div>
+                <span>Data Science</span>
+                <span>38</span>
+            </div>
+            <div>
+                <span>AutoCAD</span>
+                <span>31</span>
+            </div>
+            <div>
+                <span>Commerce</span>
+                <span>30</span>
+            </div>
+
+             <!-- Comment Box -->
+            <div class="comment-box">
+                <form class="comment-form">
+                    <h3>Leave a comment</h3>
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <textarea rows="5" placeholder="Your comment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+    <h4>About Us</h4>
+
+    <p>
+         We are a leading educational institution dedicated to academic excellence,
+    innovation, and holistic student development. Our mission is to empower
+    learners with skills and knowledge to succeed in their careers and contribute to society.
+  </p>
+    </p>
+
+    <div class="icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+        <p>Thanks for Visit <i class="fa fa-heart"></i></p>
+
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

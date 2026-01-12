@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Website Design</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <style>
+    #chatBtn {
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+      background: linear-gradient(135deg, #6366f1, #3b82f6);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 2rem;
+      /* emoji size */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: pulsePop 2s infinite;
+    }
+
+    #chatBtn::before {
+      content: "👋 Let's Chat to know More...";
+      position: absolute;
+      bottom: 65px;
+      right: 8px;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    #chatBtn:hover::before {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #chatBtn:hover {
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      /* Darker gradient on hover */
+      transform: scale(1.15) rotate(10deg);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes pulsePop {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+      }
+
+      50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 0 18px rgba(99, 102, 241, 0);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+      }
+    }
+
+    .header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+      background-size: cover;
+    }
+
+    .header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="header">
+    <video autoplay muted loop playsinline>
+      <source src="images/90907-629483627_small.mp4" type="video/mp4">
+    </video>
+    <nav>
+      <a href="index.html"><img src="images/—Pngtree—university logo in flat style_8743732.png"
+          alt="University Logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="About.html">ABOUT</a></li>
+          <li><a href="course.html">COURSE</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1> <span>Renaissance</span> University, Singapur</h1>
+      <p>
+        Our university is committed to delivering high-quality education that empowers students with knowledge,
+        skills, and confidence. We focus on academic excellence, innovation, and career-oriented learning to shape
+        future leaders across the globe.
+      </p>
+      <a href="About.html" class="hero-btn">Visit Us To Know More</a>
+    </div>
+
+    <!-- chat btn -->
+    <a href="chatbox.html"><button id="chatBtn">💬</button></a>
+  </section>
+
+  <!-- course Section  -->
+  <section class="course">
+    <h1>Courses We Offer</h1>
+    <p class="subtitle">
+      Our university offers globally recognized programs that combine academic excellence,
+      innovation, and career-oriented learning.
+    </p>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+        <h3>Intermediate (Arts)</h3>
+        <p>Build a strong foundation in humanities subjects like history, political science, and literature.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Intermediate (Commerce)</h3>
+        <p>Focused on accounting, business studies, and economics to develop analytical skills.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Intermediate (Science)</h3>
+        <p>Comprehensive study of physics, chemistry, and mathematics/biology.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Bachelor of Arts (BA)</h3>
+        <p>Undergraduate program offering diverse disciplines in arts and social sciences.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Bachelor of Commerce (B.Com)</h3>
+        <p>Develop expertise in finance, taxation, accounting, and business management.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Bachelor of Science (B.Sc)</h3>
+        <p>Science-focused degree emphasizing practical knowledge and research skills.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Industry-oriented program covering programming and modern IT technologies.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Bachelor of Business Administration (BBA)</h3>
+        <p>Build leadership and managerial skills with a strong business foundation.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Master of Arts (MA)</h3>
+        <p>Advanced studies in arts and humanities with research focus.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Master of Commerce (M.Com)</h3>
+        <p>Advanced accounting, finance, and corporate management studies.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Master of Science (M.Sc)</h3>
+        <p>Specialized scientific education with practical experimentation.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <p>Advanced computing program for IT leadership roles.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Master of Business Administration (MBA)</h3>
+        <p>Professional management program with real-world exposure.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Ph.D Programs</h3>
+        <p>Doctoral programs dedicated to advanced research and innovation.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Diploma Programs</h3>
+        <p>Skill-based short-term programs for quick professional growth.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Professional Certification Courses</h3>
+        <p>Industry-aligned certifications to boost employability.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Campus -->
+  <section class="campus">
+    <h1>Our Global Campus</h1>
+    <p class="subtitle">
+      Our university operates across world-class international locations,
+      offering students global exposure and academic excellence.
+    </p>
+
+    <div class="campus-grid">
+
+      <div class="campus-card">
+        <img src="https://img.freepik.com/free-photo/harvard-university-cambridge-usa_1268-14363.jpg" alt="London">
+        <div class="campus-layer">
+          <h3>📍LONDON</h3>
+          <p>Renowned for research excellence, innovation, and global academic leadership.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://wallpaperaccess.com/full/1912151.jpg" alt="New York">
+        <div class="campus-layer">
+          <h3>📍NEW YORK</h3>
+          <p>Located in the heart of global business, finance, and technology.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.J_sR0-BK51nPZFeL7MFbagHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Washington">
+        <div class="campus-layer">
+          <h3>📍WASHINGTON</h3>
+          <p>Focused on policy studies, international relations, and leadership programs.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://wallpapercave.com/wp/wp2468660.jpg" alt="Paris">
+        <div class="campus-layer">
+          <h3>📍PARIS</h3>
+          <p>Excellence in arts, design, humanities, and cultural studies.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.gOLtg5zhws85FDFQk6lcFwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Dubai">
+        <div class="campus-layer">
+          <h3>📍DUBAI</h3>
+          <p>Industry-driven programs with strong links to global enterprises.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.X9XZ8FgKD0RmWn_spk57DwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Singapore">
+        <div class="campus-layer">
+          <h3>📍SINGAPORE</h3>
+          <p>Innovation hub for technology, research, and entrepreneurship.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://tcglobal.com/wp-content/uploads/2023/06/Queens-University-Belfast.jpg" alt="Sydney">
+        <div class="campus-layer">
+          <h3>📍SYDNEY</h3>
+          <p>Known for environmental research, sustainability, and marine sciences.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img src="https://www.amity.edu/noida/images/ranking-banner.jpg" alt="Rome">
+        <div class="campus-layer">
+          <h3>📍ROME</h3>
+          <p>Specialized in history, archaeology, architecture, and classical studies.</p>
+        </div>
+      </div>
+
+      <div class="campus-card">
+        <img
+          src="https://tse3.mm.bing.net/th/id/OIP.SvbFQVFMHI0VzlCPW6Jm7gHaEk?w=600&h=370&rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Tokyo">
+        <div class="campus-layer">
+          <h3>📍TOKYO</h3>
+          <p>Advanced programs in robotics, AI, and next-generation technologies.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Facilities -->
+  <section class="facilities">
+    <h1>Our Facilities</h1>
+    <p class="subtitle">
+      We offer world-class facilities designed to support academic excellence,
+      innovation, wellness, and holistic student development.
+    </p>
+
+    <div class="facilities-grid">
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/9568942//" type="video/mp4">
+        </video>
+        <h3>World-Class Library</h3>
+        <p>Extensive collection of books, journals, digital resources, and peaceful study spaces.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/6077718/" type="video/mp4">
+        </video>
+        <h3>Sports Complex</h3>
+        <p>International-standard playgrounds and indoor sports facilities for fitness and teamwork.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/4053579/" type="video/mp4">
+        </video>
+        <h3>Modern Cafeteria</h3>
+        <p>Nutritious, hygienic, and delicious meals served in a comfortable dining environment.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/3195943/" type="video/mp4">
+        </video>
+        <h3>Advanced GYM</h3>
+        <p>Fully equipped labs for science, engineering, and technology-based practical learning.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/7507165/" type="video/mp4">
+        </video>
+        <h3>Luxury Hostels</h3>
+        <p>Safe, comfortable, and well-maintained residential facilities with modern amenities.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/26390901/" type="video/mp4">
+        </video>
+        <h3>Largest Garden</h3>
+        <p>State-of-the-art auditorium for seminars, conferences, cultural, and academic events.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/7584845/" type="video/mp4">
+        </video>
+        <h3>Medical Facilities</h3>
+        <p>On-campus healthcare and emergency medical support for students and staff.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/7092235/" type="video/mp4">
+        </video>
+        <h3>Smart Classrooms</h3>
+        <p>Technology-enabled classrooms with digital boards and modern teaching tools.</p>
+      </div>
+
+      <div class="facilities-card">
+        <video autoplay muted loop playsinline>
+          <source src="https://www.pexels.com/download/video/9198247/" type="video/mp4">
+        </video>
+        <h3>Computer Labes</h3>
+        <p>Seamless internet connectivity across the campus for uninterrupted learning.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="comments">
+    <h1>What Our Students Say</h1>
+    <p>
+      Our students share their experiences and success stories,
+      reflecting the quality of education and campus life we offer.
+    </p>
+
+    <div class="row">
+      <div class="comment-col">
+        <img src="images/user1.jpg" alt="Student">
+        <div>
+          <p>
+            Studying at this university has been a life-changing experience.
+            The faculty is supportive, the learning environment is motivating,
+            and the practical exposure has helped me grow academically and personally.
+          </p>
+          <h3>Ritika Sharma</h3>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <div class="comment-col">
+        <img src="images/user2.jpg" alt="Student">
+        <div>
+          <p>
+            This university provides excellent academic support and career guidance.
+            The campus facilities and teaching quality make learning enjoyable and effective.
+            I am proud to be a part of such an institution.
+          </p>
+          <h3>Prince Kumawat</h3>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta">
+    <h1>
+      Enroll For Our Various Online Courses <br>
+      From Anywhere In The World
+    </h1>
+    <a href="contact.html" class="hero-btn">CONTACT US</a>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>
+      We are a leading educational institution dedicated to academic excellence,
+      innovation, and holistic student development. Our mission is to empower
+      learners with skills and knowledge to succeed in their careers and contribute to society.
+    </p>
+
+    <div class="icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+        <p>Thanks for Visit <i class="fa fa-heart"></i></p>
+  </section>
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+</body>
+
+</html>
